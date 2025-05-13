@@ -1,0 +1,142 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9fb;
+  color: #222;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 28px;
+  color: #ffcc00;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px 60px;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+section h2 {
+  font-size: 32px;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  border-left: 5px solid #ffcc00;
+  padding-left: 10px;
+}
+
+/* Profile */
+.profile-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #1a1a2e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  border-left: 5px solid #ffcc00;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Skills list */
+#skills ul {
+  columns: 2;
+  column-gap: 40px;
+  list-style: square inside;
+}
+
+#skills ul li {
+  margin-bottom: 12px;
+}
+
+/* Contact section */
+#contact p {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#contact a {
+  color: #1a1a2e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #ffcc00;
+}
+
+/* Footer */
+footer {
+  background: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
