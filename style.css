@@ -1169,9 +1169,11 @@ footer::before {
     gap: 0.5rem;
     transition: box-shadow 0.3s;
 }
+
 .aws-validation-card:hover {
     box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
 }
+
 .aws-validation-title {
     font-size: 1rem;
     font-weight: 600;
@@ -1179,6 +1181,7 @@ footer::before {
     letter-spacing: 1px;
     margin-bottom: 0.2rem;
 }
+
 .aws-validation-number {
     font-size: 1.1rem;
     font-family: 'Fira Mono', 'Consolas', monospace;
@@ -1191,7 +1194,9 @@ footer::before {
     margin-bottom: 0.3rem;
     border: 1px dashed #2563eb;
 }
-.aws-validation-link {
+
+.aws-validation-link,
+.aws-handson-link {
     color: #2563eb;
     font-weight: 600;
     text-decoration: none;
@@ -1201,9 +1206,24 @@ footer::before {
     transition: background 0.2s, color 0.2s;
     font-size: 0.98rem;
     display: inline-block;
+    margin: 0.2rem 0;
 }
-.aws-validation-link:hover {
+
+.aws-validation-link:hover,
+.aws-handson-link:hover {
     background: #2563eb;
     color: #fff;
     text-decoration: underline;
+}
+
+.aws-handson-link {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #86efac;
+}
+
+.aws-handson-link:hover {
+    background: #15803d;
+    color: #fff;
+    border-color: #15803d;
 } 
