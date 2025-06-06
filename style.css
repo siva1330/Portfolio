@@ -1162,7 +1162,8 @@ footer::before {
     border: 2px solid #2563eb;
     border-radius: 1rem;
     box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
-    max-width: 350px;
+    max-width: 400px;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1185,7 +1186,7 @@ footer::before {
 }
 
 .aws-validation-number {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-family: 'Fira Mono', 'Consolas', monospace;
     color: #111827;
     background: #e0e7ff;
@@ -1198,6 +1199,8 @@ footer::before {
     border: 1px dashed #2563eb;
     word-break: break-all;
     line-height: 1.4;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .aws-validation-link,
@@ -1250,8 +1253,9 @@ footer::before {
     }
 
     .aws-validation-card {
+        max-width: 100%;
         padding: 1.2rem;
-        margin: 0.8rem auto;
+        margin: 0.8rem 0.5rem;
     }
 
     .aws-validation-title {
@@ -1259,8 +1263,8 @@ footer::before {
     }
 
     .aws-validation-number {
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
     }
 
     .aws-validation-link,
