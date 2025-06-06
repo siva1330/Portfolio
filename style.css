@@ -1152,4 +1152,58 @@ footer::before {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* AWS Validation Card Styles */
+.aws-validation-card {
+    margin: 1.2rem auto 0 auto;
+    padding: 1.2rem 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 80%, #e0e7ff 100%);
+    border: 2px solid #2563eb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+    max-width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: box-shadow 0.3s;
+}
+.aws-validation-card:hover {
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+}
+.aws-validation-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1d4ed8;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+.aws-validation-number {
+    font-size: 1.1rem;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    color: #111827;
+    background: #e0e7ff;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+    border: 1px dashed #2563eb;
+}
+.aws-validation-link {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    background: #f1f5fd;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.4rem;
+    transition: background 0.2s, color 0.2s;
+    font-size: 0.98rem;
+    display: inline-block;
+}
+.aws-validation-link:hover {
+    background: #2563eb;
+    color: #fff;
+    text-decoration: underline;
 } 
