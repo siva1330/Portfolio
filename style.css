@@ -1185,17 +1185,19 @@ footer::before {
 }
 
 .aws-validation-number {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-family: 'Fira Mono', 'Consolas', monospace;
     color: #111827;
     background: #e0e7ff;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-style: italic;
     letter-spacing: 0.5px;
     margin: 0.2rem 0;
     border: 1px dashed #2563eb;
     word-break: break-all;
+    line-height: 1.4;
 }
 
 .aws-validation-link,
@@ -1284,6 +1286,7 @@ footer::before {
         background: #1e40af;
         color: #e2e8f0;
         border-color: #3b82f6;
+        font-weight: 400;
     }
 
     .aws-validation-link {
