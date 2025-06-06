@@ -339,6 +339,7 @@ section:hover h2::before {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
 }
 
 .certificate-card:hover {
@@ -348,28 +349,27 @@ section:hover h2::before {
 
 .certificate-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: contain;
     background: #f8f9fa;
-    padding: 0.5rem;
+    padding: 1rem;
     transition: var(--transition);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .certificate-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .certificate-card h3 {
-    padding: 1.25rem;
+    padding: 1.5rem 1.5rem 0.5rem;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text);
     background: var(--card-bg);
     margin: 0;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 /* Projects section */
@@ -1156,8 +1156,8 @@ footer::before {
 
 /* AWS Validation Card Styles */
 .aws-validation-card {
-    margin: 1.2rem auto 0 auto;
-    padding: 1.2rem 1.5rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
     background: linear-gradient(135deg, #f8fafc 80%, #e0e7ff 100%);
     border: 2px solid #2563eb;
     border-radius: 1rem;
@@ -1166,20 +1166,22 @@ footer::before {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    transition: box-shadow 0.3s;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
 }
 
 .aws-validation-card:hover {
     box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+    transform: translateY(-2px);
 }
 
 .aws-validation-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #1d4ed8;
-    letter-spacing: 1px;
-    margin-bottom: 0.2rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
 }
 
 .aws-validation-number {
@@ -1187,12 +1189,13 @@ footer::before {
     font-family: 'Fira Mono', 'Consolas', monospace;
     color: #111827;
     background: #e0e7ff;
-    padding: 0.4rem 0.7rem;
+    padding: 0.6rem 1rem;
     border-radius: 0.5rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.5px;
-    margin-bottom: 0.3rem;
+    margin: 0.2rem 0;
     border: 1px dashed #2563eb;
+    word-break: break-all;
 }
 
 .aws-validation-link,
@@ -1201,19 +1204,23 @@ footer::before {
     font-weight: 600;
     text-decoration: none;
     background: #f1f5fd;
-    padding: 0.3rem 0.7rem;
-    border-radius: 0.4rem;
-    transition: background 0.2s, color 0.2s;
-    font-size: 0.98rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
     display: inline-block;
     margin: 0.2rem 0;
+    border: 1px solid #2563eb;
+    width: 100%;
+    text-align: center;
 }
 
 .aws-validation-link:hover,
 .aws-handson-link:hover {
     background: #2563eb;
     color: #fff;
-    text-decoration: underline;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .aws-handson-link {
@@ -1226,4 +1233,73 @@ footer::before {
     background: #15803d;
     color: #fff;
     border-color: #15803d;
+    box-shadow: 0 4px 12px rgba(21, 128, 61, 0.2);
+}
+
+/* Responsive adjustments for AWS certificate section */
+@media (max-width: 768px) {
+    .certificate-card img {
+        height: 180px;
+    }
+
+    .certificate-card h3 {
+        font-size: 1.1rem;
+        padding: 1.2rem 1.2rem 0.5rem;
+    }
+
+    .aws-validation-card {
+        padding: 1.2rem;
+        margin: 0.8rem auto;
+    }
+
+    .aws-validation-title {
+        font-size: 1rem;
+    }
+
+    .aws-validation-number {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .aws-validation-link,
+    .aws-handson-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .certificate-card img {
+        background: #1a1a1a;
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .aws-validation-card {
+        background: linear-gradient(135deg, #1e293b 80%, #1e40af 100%);
+        border-color: #3b82f6;
+    }
+
+    .aws-validation-number {
+        background: #1e40af;
+        color: #e2e8f0;
+        border-color: #3b82f6;
+    }
+
+    .aws-validation-link {
+        background: #1e40af;
+        color: #e2e8f0;
+        border-color: #3b82f6;
+    }
+
+    .aws-handson-link {
+        background: #064e3b;
+        color: #a7f3d0;
+        border-color: #059669;
+    }
+
+    .aws-handson-link:hover {
+        background: #059669;
+        color: #f0fdf4;
+    }
 } 
